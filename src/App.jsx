@@ -1,21 +1,44 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Movie from './class/movies'
+import { PickMovie } from './components/PickMovie'
+
+
+// const movies = [
+//   new Movie("Fast and Furious 13", 100),
+//   new Movie("Rush Hour 1", 50),
+//   new Movie("Rush Hour 2", 70),
+//   new Movie("Rush Hour 3", 40)
+// ]
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+
+    const getData = async () => {
+      const response = await fetch("https://localhost:7049/api/Movies");
+
+      // console.log(response);
+
+      const data = await response.json();
+
+      console.log(data);
+      
+      setMovies(data)
+
+    }
+
+    getData()
+
+  }, [])
 
   return (
     <>
       <div class="movie-container">
-      <label for="movie">Pick a movie:</label>
-      <select name="movie" id="movie">
-        <option value="100">Fast and furious 13 (100 kr)</option>
-        <option value="50">Rush Hour 1 (50 kr)</option>
-        <option value="70">Rush Hour 2 (70 kr)</option>
-        <option value="40">Rush Hour 3 (40 kr)</option>
-      </select>
+      <PickMovie movies={movies} />
     </div>
     <ul class="showcase">
       <li>
