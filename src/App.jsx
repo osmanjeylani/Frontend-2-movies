@@ -5,6 +5,9 @@ import './App.css'
 import { PickMovie } from './components/PickMovie'
 import Movie from './class/Movie'
 import { Seat } from './components/seat'
+import { BookingForm } from './components/BookingForm'
+import { AdminView } from './components/AdminView'
+
 
 
 // const movies = [
@@ -18,6 +21,8 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [count, setCount] = useState(0)
   const [ticketPrice, setTicketPrice] = useState(0)
+  const [showBookingForm, setShowBookingForm] = useState(false);
+  const [showAdminView, setShowAdminView] = useState(false);
 
   const totalPrice = count * ticketPrice;
 
@@ -43,7 +48,7 @@ function App() {
   useEffect(() => {
 
     const getData = async () => {
-      const response = await fetch("https://localhost:7049/api/Movies");
+      const response = await fetch("http://localhost:3001/movies");
 
       // console.log(response);
 
@@ -51,9 +56,10 @@ function App() {
 
       console.log(data);
 
-      const movieObjects = data.map(m => new Movie(m.title, m.price))
+      const movieObjects = data.map(m => new Movie(m.id, m.title, m.price, m.poster))
       
       setMovies(movieObjects)
+      setTicketPrice(data[0].price)
 
     }
 
@@ -148,6 +154,20 @@ function App() {
       <span>{totalPrice}</span>
     </p>
       
+      <button className="book-button" onClick={() => setShowBookingForm(!showBookingForm)}>
+        BOKA
+      </button>
+      {showBookingForm && (
+        <BookingForm />
+      )}
+
+      <button className="admin-button" onClick={() => setShowAdminView(true)}>
+        ADMIN
+      </button>
+      {showAdminView && (
+      <AdminView movies={movies} setMovies={setMovies} />
+      )}
+
     </>
   )
 }

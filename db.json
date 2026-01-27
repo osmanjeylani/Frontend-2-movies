@@ -1,0 +1,32 @@
+{
+  "movies": [
+    {
+      "id": "28bf",
+      "title": "Fast and Furious X",
+      "year": "2023",
+      "price": 100,
+      "poster": "https://image.tmdb.org/t/p/original/fiVW06jE7z9YnO4trhaMEdclSiC.jpg"
+    },
+    {
+      "id": "6db1",
+      "title": "Rush Hour",
+      "year": "1998",
+      "price": 500,
+      "poster": "https://image.tmdb.org/t/p/original/dbOUsoBYrl7AV1DGHOX5NFi3IeW.jpg"
+    },
+    {
+      "id": "29cf",
+      "title": "Rush Hour 2",
+      "year": "2001",
+      "price": 450,
+      "poster": "https://image.tmdb.org/t/p/original/pds2MC6FXOF0NqlxWm1eRRd86Y4.jpg"
+    },
+    {
+      "id": "f36f",
+      "title": "Rush Hour 3",
+      "year": "2007",
+      "price": 300,
+      "poster": "https://image.tmdb.org/t/p/original/5jsUT6FNzd8yx5zmkyJ1DaZmXM3.jpg"
+    }
+  ]
+}

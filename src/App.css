@@ -115,3 +115,17 @@ p.text {
 p.text span {
   color: #6feaf6;
 }
+
+.book-button {
+  padding: 12px 24px;
+  margin-top: 12px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.book-button:hover {
+  background-color: #1877cc;
+}
