@@ -4,6 +4,11 @@ Users can select a seat, choose a movie, see the total price and make a booking.
 Bookings are saved via a API json-server.
 An adminview is included for managing movies.
 
+IMPORTANT COMMANDS TO START APPLICATION:
+First open the terminal and type "npm run dev" and Enter.
+Then type "npx json-server --watch db.json --port 3001"
+
+
 Purpose:
 This project was created as part of a school assignment to practice:
 - React and component-based development
