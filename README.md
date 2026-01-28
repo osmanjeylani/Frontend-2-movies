@@ -1,16 +1,54 @@
-# React + Vite
+Movie booking app.
+This project is a Movie Booking application built with React.
+Users can select a seat, choose a movie, see the total price and make a booking.
+Bookings are saved via a API json-server.
+An adminview is included for managing movies.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+IMPORTANT COMMANDS TO START APPLICATION:
+First open the terminal and type "npm run dev" and Enter.
+Then type "npx json-server --watch db.json --port 3001"
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Purpose:
+This project was created as part of a school assignment to practice:
+- React and component-based development
+- State management using hooks
+- Api communication
+- Project structure and GitHub workflow.
 
-## React Compiler
+Features:
+- Select a movie
+- Choose seats
+- Dynamic price calculation
+- Booking form with confirmation
+- Bookings saved to API
+- Adminview (add movies, delete movies)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  Tech Stack:
+  -React
+  -JavaScript
+  -Json-Server
+  -Fetch-API
+  -CSS
 
-## Expanding the ESLint configuration
+  Booking Flow
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+User selects a movie
+
+User picks seats
+
+Total price updates dynamically
+
+User fills in booking form
+
+Booking is saved to the API
+
+Confirmation is shown and form closes.
+
+
+
+  Future improvements:
+  -Improve UI/UX
+  - Display booking details in adminview
+  - Add form validation feedback
+  - Persist selected seats per screening.
