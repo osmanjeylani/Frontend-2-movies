@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export const BookingForm = () => {
+export const BookingForm = ({ onClose }) => {
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -20,6 +20,9 @@ export const BookingForm = () => {
       },
       body: JSON.stringify(booking)
     });
+
+    alert("🎉 Bokningen är bekräftad!");
+    onClose();
 
     setName("");
     setPhone("");

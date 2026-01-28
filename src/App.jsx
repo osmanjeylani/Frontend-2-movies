@@ -155,10 +155,10 @@ function App() {
     </p>
       
       <button className="book-button" onClick={() => setShowBookingForm(!showBookingForm)}>
-        BOKA
+        BOKA  
       </button>
       {showBookingForm && (
-        <BookingForm />
+        <BookingForm onClose={() => setShowBookingForm(false)} />
       )}
 
       <button className="admin-button" onClick={() => setShowAdminView(true)}>
