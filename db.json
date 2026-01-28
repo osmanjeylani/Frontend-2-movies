@@ -28,5 +28,17 @@
       "price": 300,
       "poster": "https://image.tmdb.org/t/p/original/5jsUT6FNzd8yx5zmkyJ1DaZmXM3.jpg"
     }
+  ],
+  "bookings": [
+    {
+      "id": "0",
+      "name": "Osman Jeylani",
+      "phone": "0738537799"
+    },
+    {
+      "id": "993d",
+      "name": "osman the goat",
+      "phone": "0702553645"
+    }
   ]
 }
